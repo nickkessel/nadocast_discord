@@ -22,7 +22,7 @@ import os
 cwd = Path(os.getcwd())
 env_path = cwd / '.env'
 load_dotenv(env_path)
-DISCORD_WEBHOOK = os.getenv('305_WEBHOOK')
+webhook_url = os.getenv('DISCORD_WEBHOOK')
 
 #times when model runs become available
 AVAILABLE_00Z = '03:30'
@@ -198,4 +198,4 @@ run_hour = get_latest_run(date_no_day,current_date,current_time)
 domains_list = [CONUS, MW_GL, C_PLAINS, NE, CINCY, MI]
 for domain in domains_list:
     caption, img_save_path = generate_map(domain, run_hour)
-    send_to_discord([DISCORD_WEBHOOK], caption, img_save_path)
+    send_to_discord([webhook_url], caption, img_save_path)
