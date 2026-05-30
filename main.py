@@ -33,9 +33,9 @@ AVAILABLE_18Z = '21:05'
 #DOMAINS
 CONUS = ['CONUS', -127, -65, 25, 50]
 CINCY = ['Cincinnati', -87.5, -82, 37.5, 41.5]
-MW_GL = ['Midwest/Great Lakes', -97.5, -79.5, 35, 48]
-C_PLAINS = ['Central Plains', -105.5, -93, 34.5, 44]
-NE = ['Northeast US', -80.5, -67.5, 39.5, 47.5]
+MW_GL = ['Midwest_Great_Lakes', -97.5, -79.5, 35, 48]
+C_PLAINS = ['Central_Plains', -105.5, -93, 34.5, 44]
+NE = ['Northeast_US', -80.5, -67.5, 39.5, 47.5]
 MI = ['Michigan', -91, -82, 41.5, 47.5]
 
 DATA_MIN = 0
