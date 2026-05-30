@@ -1,0 +1,9 @@
+matplotlib
+requests
+pygrib
+dotenv
+cartopy
+datetime
+metpy
+numpy
+discord_webhook

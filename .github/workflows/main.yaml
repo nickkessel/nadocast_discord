@@ -19,12 +19,13 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
           
       - name: install dependencies
         run: |
-          # install packages
+          # install packages from requirements
           python -m pip install --upgrade pip
-          pip install matplotlib requests pygrib dotenv cartopy datetime metpy numpy discord_webhook
+          pip install -r requirements.txt
           
       - name: execute script
         env:
