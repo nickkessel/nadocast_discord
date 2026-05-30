@@ -2,3 +2,4 @@
 /.env
 .vscode/
 /output
+*.grib2
