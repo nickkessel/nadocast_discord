@@ -1,33 +1,34 @@
-name: create graphics and send
-
-on:
-  schedule:
-    # run at 0330z, 1555z, and 2105z  utc daily
-    #- cron: '30 3 * * *'
-    #- cron: '55 15 * * *'
-    #- cron: '5 21 * * *'
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout repo
-        uses: actions/checkout@v6
-        
-      - name: setup python
-        uses: actions/setup-python@v6
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-          
-      - name: install dependencies
-        run: |
-          # install packages from requirements
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          
-      - name: execute script
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-        run: python main.py
+#name: create graphics and send
+#
+#on:
+#  schedule:
+#    # run at 0330z, 1555z, and 2105z  utc daily
+#    - cron: '30 3 * * *'
+#    - cron: '55 15 * * *'
+#    - cron: '5 21 * * *'
+#  workflow_dispatch:
+#
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: checkout repo
+#        uses: actions/checkout@v6
+#        
+#      - name: setup python
+#        uses: actions/setup-python@v6
+#        with:
+#          python-version: '3.11'
+#          cache: 'pip'
+#          
+#      - name: install dependencies
+#        run: |
+#          # install packages from requirements
+#          python -m pip install --upgrade pip
+#          pip install -r requirements.txt
+#          
+#      - name: execute script
+#        env:
+#          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+#        run: python main.py
+#
